@@ -19,6 +19,7 @@ fetchReplacement = (url) ->
   xhr = new XMLHttpRequest
   xhr.open 'GET', removeHashForIE10compatiblity(url), true
   xhr.setRequestHeader 'Accept', 'text/html, application/xhtml+xml, application/xml'
+  xhr.setRequestHeader 'X-XHR-Turbolink', 'true'
   xhr.setRequestHeader 'X-XHR-Referer', referer
 
   xhr.onload = ->
